@@ -1,0 +1,7 @@
+postfix_conf:
+  mydomain: "localdomain"
+  myorigin: "$mydomain"
+  myhostname: "{{ inventory_hostname }}"
+  mydestination: "$myhostname, localhost.$mydomain"
+  mynetworks: "192.168.0.0/16"
+  inet_interfaces: "all"

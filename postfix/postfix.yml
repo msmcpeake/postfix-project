@@ -1,0 +1,13 @@
+- name: Open firewall for smtp on postfix_server group
+  hosts: postfix_server
+  tasks:
+    - firewalld:
+        service: smtp
+        permanent: yes
+        immediate: yes
+        state: enabled
+
+- name: Run postfix role
+  hosts: all
+  roles:
+    - rhel-system-roles.postfix

@@ -1,3 +1,6 @@
+ansible_connection: ssh 
+ansible_ssh_user: root 
+ansible_ssh_pass: 
 postfix_conf:
   mydomain: "localdomain"
   myorigin: "$mydomain"
